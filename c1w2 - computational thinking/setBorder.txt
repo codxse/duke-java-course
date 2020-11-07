@@ -1,0 +1,32 @@
+var panda = new SimpleImage('smallpanda.png');
+
+function setBlack(pixel) {
+    pixel.setRed(0);
+    pixel.setBlue(0);
+    pixel.setGreen(0);
+    return pixel;
+}
+
+function addBorder(image, tickness) {
+    var h = image.getHeight();
+    var w = image.getWidth();
+    for (pixel of image.values()) {
+        var x = pixel.getX();
+        var y = pixel.getY();
+        if (x >= 0 && x < tickness) {
+            setBlack(pixel);
+        }
+        if (x > (w - tickness)) {
+            setBlack(pixel);
+        }
+        if (y >= 0 && y < tickness) {
+            setBlack(pixel);
+        }
+        if (y > (h - tickness)) {
+            setBlack(pixel);
+        }
+    }
+}
+
+addBorder(panda, 10);
+print(panda);

@@ -1,0 +1,23 @@
+// write your code here
+var hilton = new SimpleImage('hilton.jpg');
+var WIDTH = hilton.getWidth();
+
+for (var pixel of hilton.values()) {
+    var ONE_THIRD = WIDTH * 0.33;
+    var TWO_THIRD = ONE_THIRD * 2;
+    
+    if (pixel.x >= 0 && pixel.x < ONE_THIRD) {
+        pixel.setRed(255);
+        hilton.setPixel(pixel.x, pixel.y, pixel);
+    }
+    if (pixel.x >= ONE_THIRD && pixel.x < TWO_THIRD) {
+        pixel.setGreen(255);
+        hilton.setPixel(pixel.x, pixel.y, pixel);
+    }
+    if (pixel.x >= TWO_THIRD) {
+        pixel.setBlue(255);
+        hilton.setPixel(pixel.x, pixel.y, pixel);
+    }
+}
+
+print(hilton);
