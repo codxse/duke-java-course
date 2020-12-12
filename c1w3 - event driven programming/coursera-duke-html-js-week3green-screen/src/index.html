@@ -1,0 +1,17 @@
+<script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
+
+<canvas id="canvas1"></canvas>
+<canvas id="canvas2"></canvas>
+
+<div>
+  Foreground:
+  <input type="file" multiple="false" accept="image/*" id="fgimage" onchange="loadFGImage()"/>
+  
+  Background:
+  <input type="file" multiple="false" accept="image/*" id="bgimage" onchange="loadBGImage()"/>
+  
+  <input type="button" value="Reset" onclick="clearCanvas()"/>
+  
+  <input type="button" value="Green Screen" onclick="greenScreen()" />
+  
+</div>
