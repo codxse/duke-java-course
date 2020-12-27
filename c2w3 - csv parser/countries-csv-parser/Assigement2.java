@@ -24,7 +24,7 @@ public class Assigement2 {
         FileResource fr = new FileResource();
         CSVRecord largestTemperatrureRow = hottestHourInFile(fr.getCSVParser());
         System.out.println("Hottest temp was " + largestTemperatrureRow.get("TemperatureF") 
-            + " at " + largestTemperatrureRow.get("TimeEST"));
+            + " at " + largestTemperatrureRow.get("DateUTC"));
     }
     
     CSVRecord coldestHourInFile(CSVParser parser) {
@@ -39,7 +39,7 @@ public class Assigement2 {
         FileResource fr = new FileResource();
         CSVRecord coldest = coldestHourInFile(fr.getCSVParser());
         System.out.println("Coldest temp was " + coldest.get("TemperatureF") 
-            + " at " + coldest.get("TimeEST"));
+            + " at " + coldest.get("DateUTC"));
     }
     
     CSVRecord hottestInManyDays() {
@@ -80,6 +80,14 @@ public class Assigement2 {
         } else {
             double oneTemp = Double.parseDouble(one.get("TemperatureF"));
             double twoTemp = Double.parseDouble(two.get("TemperatureF"));
+            
+            if (oneTemp < -999) {
+                return two;
+            }
+            
+            if (twoTemp < -999) {
+                return one;
+            }
             
             if (oneTemp < twoTemp) {
                 return one;

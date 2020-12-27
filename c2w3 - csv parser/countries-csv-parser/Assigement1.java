@@ -45,8 +45,9 @@ public class Assigement1 {
     void testListExportersTwoProducts() {
         FileResource fr = new FileResource();
         CSVParser parser = fr.getCSVParser();
-        listExportersTwoProducts(parser, "gold", "diamonds");
+        //listExportersTwoProducts(parser, "gold", "diamonds");
         //listExportersTwoProducts(parser, "fish", "nuts");
+        listExportersTwoProducts(parser, "cotton", "flowers");
     }
     
     int numberOfExporters(CSVParser parser, String exportItem) {
@@ -65,7 +66,7 @@ public class Assigement1 {
         CSVParser parser = fr.getCSVParser();
         //int exporters = numberOfExporters(parser, "gold");
         //System.out.println("Number countries that export gold: " + exporters);
-        int exporters2 = numberOfExporters(parser, "sugar");
+        int exporters2 = numberOfExporters(parser, "cocoa");
         System.out.println("Number countries that export sugar: " + exporters2);
     }
     
