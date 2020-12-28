@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="_libs.lib" target="11" />
+      <module name="_libs.lib.main" target="11" />
+      <module name="_libs.lib.test" target="11" />
+      <module name="BabyNames.course-deps.main" target="11" />
+      <module name="BabyNames.course-deps.test" target="11" />
+      <module name="libs" target="11" />
+      <module name="libs.main" target="11" />
+      <module name="libs.test" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

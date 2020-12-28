@@ -1,0 +1,4 @@
+rootProject.name = 'BabyNames'
+include ":deps"
+project(":deps").projectDir = file("../../_deps")
+

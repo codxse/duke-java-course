@@ -1,0 +1,2 @@
+id/nadiar/babynames_tests/MiniProjectTest.java
+ id.nadiar.babynames_tests.MiniProjectTest
